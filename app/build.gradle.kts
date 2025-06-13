@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.recyclerviewwithstring"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.recyclerviewwithstring"
@@ -32,6 +32,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 }
 
