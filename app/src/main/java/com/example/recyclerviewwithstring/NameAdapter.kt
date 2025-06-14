@@ -11,12 +11,14 @@ import com.example.recyclerviewwithstring.databinding.ItemNameBinding
 class NameAdapter : ListAdapter<String, NameViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NameViewHolder {
-       ItemNameBinding.inflate(LayoutInflater.from(parent.context),parent,false)
-        TODO("Not yet implemented")
+      val binding=ItemNameBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        return NameViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: NameViewHolder, position: Int) {
-        TODO("Not yet implemented")
+      getItem(position).let {
+          holder.binding.nametv.text=it
+      }
     }
 
 
