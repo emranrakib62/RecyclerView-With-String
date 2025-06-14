@@ -1,5 +1,9 @@
 package com.example.recyclerviewwithstring
 
-class NameAdapter {
+import android.widget.ListAdapter
+
+class NameAdapter:ListAdapter <String, NameViewHolder>() {
+
+
 
 }
