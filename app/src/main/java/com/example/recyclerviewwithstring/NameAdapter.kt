@@ -3,6 +3,7 @@ package com.example.recyclerviewwithstring
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 
 
@@ -20,6 +21,17 @@ class NameAdapter : ListAdapter<String, NameViewHolder>() {
           holder.binding.nametv.text=it
       }
     }
+companion object{
+    val comparator=object :DiffUtil.ItemCallback<String>(){
+        override fun areItemsTheSame(oldItem: String, newItem: String): Boolean {
+            return  oldItem==newItem
+        }
 
+        override fun areContentsTheSame(oldItem: String, newItem: String): Boolean {
+            return  oldItem==newItem
+        }
+
+    }
+}
 
 }
