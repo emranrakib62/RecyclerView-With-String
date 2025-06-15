@@ -6,9 +6,11 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+android:layout_margin="5dp"
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
         android:id="@+id/nameRCV"
         android:layout_width="0dp"
         android:layout_height="0dp"

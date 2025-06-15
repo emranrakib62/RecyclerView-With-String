@@ -8,7 +8,7 @@ import com.example.recyclerviewwithstring.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private val nameList = listOf("Mehedi", "Masum", "Avijit", "Mehedi", "Masum", "Avijit")
+    private val nameList = listOf("Mehedi", "Masum", "Avijit", "Mehedi", "Masum", "Avijit","Mehedi", "Masum", "Avijit", "Mehedi", "Masum", "Avijit")
     private lateinit var nameAdapter: NameAdapter
     private lateinit var binding: ActivityMainBinding
 
@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         nameAdapter = NameAdapter()
-        binding.nameRCV.layoutManager = LinearLayoutManager(this)  // ✅ Added this
+        binding.nameRCV.layoutManager = LinearLayoutManager(this)
         binding.nameRCV.adapter = nameAdapter
         nameAdapter.submitList(nameList)
     }
