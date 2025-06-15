@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         nameAdapter = NameAdapter()
-        binding.nameRCV.layoutManager = LinearLayoutManager(this)
         binding.nameRCV.adapter = nameAdapter
         nameAdapter.submitList(nameList)
     }
