@@ -3,6 +3,7 @@ package com.example.recyclerviewwithstring
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.recyclerviewwithstring.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         nameAdapter = NameAdapter()
+        binding.nameRCV.layoutManager = LinearLayoutManager(this)  // ✅ Added this
         binding.nameRCV.adapter = nameAdapter
         nameAdapter.submitList(nameList)
     }
